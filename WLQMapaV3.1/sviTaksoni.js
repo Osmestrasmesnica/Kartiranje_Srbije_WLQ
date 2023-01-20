@@ -130,39 +130,42 @@ console.log(proba123);
   //!Oni kvadracitici koji se ne ponavljaju 10x10
   var kockice = Array.from(new Set(podaciUTM10))
   console.log(kockice);
-
-
-
-
-
-var arrayJedistvenihUTM = new Array();
-for (var i = 0; i < kockice.length; i ++)
-  arrayJedistvenihUTM[i] = lepPrikaz.filter(utm => utm.utm10x10.includes(`${kockice[i]}`))
-arrayJedistvenihUTM;
-
-console.log(arrayJedistvenihUTM);
-console.table(arrayJedistvenihUTM[0]);
-
-
-
+  console.log(lepPrikaz.filter(utm => utm.podatak.includes(`Usm`)));
+var T = new Array();
+var L = new Array();
+var H = new Array();
+var qwerty = [];
 //!za svaki kockice if=lepPrikaz[i].utm10x10  nađeš sve vrednosti lepPrikaz[i].Tip_podatka i ako ima herbar onda H ako ima Herbar i literaturni ond HiL ako ima sva tri ond HiLiT
-for (var i = 0; i < kockice.length; i ++){
-  console.table(arrayJedistvenihUTM[i]); 
-  
-  
-  // lepPrikaz[i].Tip_podatka;
-  // lepPrikaz[i].utm10x10;
-  // kockice;
 
-}
 
   //!Za svaki 10x10 kvadratic se pravi div
   //za svaki od kockice[i] treba da se odradi ovo sve dok i = kokice.lenght
   let output = "";
-  for (let i=0; i < lepPrikaz.length; i++) {
-    const proba10 = lepPrikaz[i].utm10x10;
-    const probaTip = lepPrikaz[i].Tip_podatka;    
-    
+  for (let i=0; i < kockice.length; i++) {
+    // const proba10 = lepPrikaz[i].utm10x10;
+    // const probaTip = lepPrikaz[i].Tip_podatka;    
+    const proba10 = kockice[i];
+    T[i] = lepPrikaz
+        .filter(utm => utm.utm10x10.includes(`${kockice[i]}`) 
+        && utm.podatak.includes("Terenski"))
+        
+    L[i] = lepPrikaz
+        .filter(utm => utm.utm10x10.includes(`${kockice[i]}`) 
+        && utm.podatak.includes("Literaturni"))
+
+    H[i] = lepPrikaz
+        .filter(utm => utm.utm10x10.includes(`${kockice[i]}`) 
+        && utm.podatak.includes("Usmeni"))
+
+    T[i].length > 0 && L[i].length > 0 && H[i].length > 0 ? qwerty[i] = ("TiLiH") 
+    : T[i].length > 0 && L[i].length > 0 ? qwerty[i] = ("TiL") 
+    : T[i].length > 0 && H[i].length > 0 ? qwerty[i] = ("TiH") 
+    : L[i].length > 0 && H[i].length > 0 ? qwerty[i] = ("LiH")
+    : T[i].length > 0 ? qwerty[i] = ("T") 
+    : L[i].length > 0 ? qwerty[i] = ("L")
+    : T[i].length > 0 ? qwerty[i] = ("H")
+    : console.log("nema bato nista");
+
     //* console.log(zaUbacivanje);
     let dugme = document.querySelector('#dugme');
     dugme.addEventListener('click', event => {
@@ -189,13 +192,7 @@ for (var i = 0; i < kockice.length; i ++){
       : drugoSlovo.includes('S') ? document.getElementById(`product${i}`).style.top = `calc(calc(-5${drugiBroj}*10.24px) + 562.55px)`
       : console.log('nista od navedenog nema');
 
-      // var t = document.getElementById(`product${i}`).style.top;
-      // var l = document.getElementById(`product${i}`).style.left;
-      // console.log(l,t);
-
-      // probaTip === "Literaturni" ? document.getElementById(`product${i}`).className = "triangle"
-      // : probaTip === "Herbarski" ? (document.getElementById(`product${i}`).className = "star", document.getElementById(`product${i}`).style.top = `calc(${t} + 3px)`)
-      // : console.log('wtf');
+      document.getElementById(`product${i}`).className = qwerty[i]
     });
     //!Da li ovo ide u pelju ili ne?
     //!Za svaki 10x10 [i] praviš div
@@ -205,7 +202,6 @@ for (var i = 0; i < kockice.length; i ++){
     document.querySelector(".products").innerHTML = output; 
   };
    
-
    //todo Napravti dugme za skidanje dela iz HTML, ima na YT kako nesto kao HTML to Canvas
    //todo napraviti da input za pojedincani 10x10 bude opadajuci meni sa ponudjenim kvadraticima i brojevima
    //todo srediti malo taj input iz excel tabele i export u exel tabelu preko JSON

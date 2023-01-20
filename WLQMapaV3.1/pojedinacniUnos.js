@@ -25,3 +25,7 @@ btn.addEventListener('click', event => {
     : drugoSlovo.includes('S') ? document.getElementById('XYnn').style.top = `calc(calc(-5${drugiBroj}*10.24px) + 562.55px)`
     : console.log('nista od navedenog nema');
 });
+
+//todo mogao bi napraviš da ti pravi <div></div> za svaki klik dugmetom 
+//todo onda možeš da napraviš i da ti ukloni sve/poslednji div
+//todo napravi da možeš i da biraš kakav će biti taj div isto (T/L/H)

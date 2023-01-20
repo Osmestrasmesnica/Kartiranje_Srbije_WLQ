@@ -152,7 +152,7 @@
   .LiH{
     height: 8.25px;
     width: 8.2333px;
-    background: linear-gradient( 180deg, var(--bojaBordera), var(--bojaBordera) 49%, white 49%,  var(--bojaSredineKruga) 51% ); 
+    background: linear-gradient( 180deg, rgb(0, 255, 51), rgb(0, 255, 51) 49%, white 49%,  var(--bojaSredineKruga) 51% ); 
     border-radius: 50%;
     box-sizing: border-box;
     position: absolute;
@@ -192,3 +192,41 @@
     left: calc(calc(00*10.217px) + 63.764px);
     background: var(--bojaBordera);
   }
+
+  .T{
+    box-sizing: border-box;
+    position: absolute;
+    top: calc(calc(-00*10.24px) + 562.55px);
+    left: calc(calc(00*10.217px) + 63.764px);
+    height: 8.25px;
+    width: 8.2333px;
+
+    border-radius: 3rem;
+    background-color: var(--bojaBordera);  
+  }
+  .L{
+    box-sizing: border-box;
+    position: absolute;
+    top: calc(calc(-00*10.24px) + 562.55px);
+    left: calc(calc(00*10.217px) + 63.764px);
+    height: 8.25px;
+    width: 8.2333px;
+
+    border-radius: 3rem;
+    background-color: var(--bojaSredineKruga);  
+  } 
+
+  .H{
+    box-sizing: border-box;
+    position: absolute;
+    top: calc(calc(-00*10.24px) + 562.55px);
+    left: calc(calc(00*10.217px) + 63.764px);
+    height: 8.25px;
+    width: 8.2333px;
+    border-radius: 3rem;
+    background-color:  rgb(0, 255, 51); 
+  } 
+
+  /*todo srediti lepo sve ove H/L/T */
+  /*todo dodati za USMENI podatak */
+  /*todo dodati za SUMNJIV i NEPRECIZAN podatak */

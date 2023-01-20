@@ -9,5 +9,5 @@ function liveUpdate () {
 inputs.forEach(input => input.addEventListener('change', liveUpdate));
 inputs.forEach(input => input.addEventListener('mousemove', liveUpdate));
 
-
-
+//todo napraviti varijablu za boju Herbarskog podatka 
+//todo eventualno usmenog podatka
