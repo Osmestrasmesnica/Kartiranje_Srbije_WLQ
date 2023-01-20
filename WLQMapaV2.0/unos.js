@@ -34162,7 +34162,7 @@ const podaci = [
       Podatak: i.tip_podatka
     } 
   });
-  //* console.log(sredjeno);
+  console.log(sredjeno);
 
   //!pravljenje funkcije koja prolazi kroz sve podatke i vadi za svaku vrstu svaki UTM koji se pojavljuje, i gleda da li ima duplikata ili ne
   function myFunction() {
@@ -34185,15 +34185,21 @@ const podaci = [
     console.log(y);
 
     let nizUTMOdabraneVrste = [];
+    let nizTipPodatkaOdabraneVrste = [];
     for(let i=0; i<arrIzabraneVrste.length; i++){
       nizUTMOdabraneVrste.push(arrIzabraneVrste[i].UTM10x10);
+      nizTipPodatkaOdabraneVrste.push(arrIzabraneVrste[i].Podatak);
     }
     console.log(nizUTMOdabraneVrste);
+    console.log(nizTipPodatkaOdabraneVrste);
 
     let outputVrste = "";
     for (let i=0; i < nizUTMOdabraneVrste.length; i++) {
     const zaUbacivanjeVrste = nizUTMOdabraneVrste[i];
-    //* console.log(zaUbacivanjeVrste);
+    const zaUbacivanjeTipPodatka = nizTipPodatkaOdabraneVrste[i];
+    console.log(zaUbacivanjeVrste);
+    console.log(zaUbacivanjeTipPodatka);
+
     let dugmeVrste = document.querySelector('.btnVrsta');
     dugmeVrste.addEventListener('click', event => {
       let prvoSlovoVrste = zaUbacivanjeVrste.substring(0,1);
@@ -34201,6 +34207,7 @@ const podaci = [
       let prviBrojVrste = zaUbacivanjeVrste.substring(2,3);
       let drugiBrojVrste = zaUbacivanjeVrste.substring(3,4);
       //* console.log(prvoSlovoVrste, drugoSlovoVrste, prviBrojVrste, drugiBrojVrste);
+      
       
       // za prvo slovo
       zaUbacivanjeVrste ==='' ? alert('Moraš da ubaciš ispravnu vrednost 10x10 UTM kvadrata!')
@@ -34218,7 +34225,13 @@ const podaci = [
       : drugoSlovoVrste.includes('R') ? document.getElementById(`product${i}`).style.top = `calc(calc(-4${drugiBrojVrste}*10.24px) + 562.55px)`
       : drugoSlovoVrste.includes('S') ? document.getElementById(`product${i}`).style.top = `calc(calc(-5${drugiBrojVrste}*10.24px) + 562.55px)`
       : console.log('nista od navedenog nema');
+
+      zaUbacivanjeTipPodatka === 'Terenski'  ? document.getElementById(`product${i}`).className = 'product'
+     :zaUbacivanjeTipPodatka.includes('Literaturni') ? document.getElementById(`product${i}`).className = 'triangle'
+     :console.log(zaUbacivanjeTipPodatka);
     });
+
+    
     
     // kreireanje HTML outputa za svaki i
     outputVrste += `
@@ -34245,7 +34258,7 @@ const podaci = [
       return{}
     };
   });
-  console.log(result);
+  console.log(result[1].Podatak);
 
   let asd = result[0].UTM10x10
   console.log(asd);
@@ -34282,7 +34295,7 @@ const podaci = [
 
   //! samo vrednosti 10x10 kvadratica
   const podaciUTM10 = podaciUTM.map(podatak => podatak.UTM_10x10)
-  //* console.log(podaciUTM10);
+  console.log(podaciUTM10);
 
   
   //! tacno vidis koliko cega imas

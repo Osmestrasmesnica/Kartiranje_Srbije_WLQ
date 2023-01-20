@@ -94,3 +94,16 @@ img{
   background-color: var(--bojaSredineKruga); 
 }
 
+.triangle {
+  width: 0;
+  height: 0;
+  border: 4.16px solid transparent;
+  border-top: 0;
+  border-bottom: 8.25px solid red;
+  border-bottom-color: var(--bojaBordera);
+  box-sizing: border-box;
+  position: absolute;
+  top: calc(calc(-00*10.24px) + 562.55px);
+  left: calc(calc(00*10.217px) + 63.764px);
+  background-color: var(--bojaSredineKruga);
+}

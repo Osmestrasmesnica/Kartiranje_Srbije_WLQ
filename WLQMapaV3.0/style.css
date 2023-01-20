@@ -1,0 +1,194 @@
+:root {
+    margin: 0;
+    padding: 0;
+    --bojaSredineKruga: black;
+    --sirinaBordera: 2px  ;
+    --stilBordera: solid ;
+    --bojaBordera: rgb(211, 255, 0);
+    --size: 8px;
+    --half-size: calc(var(--size) / 2);
+  }
+  
+  .mapa{
+    display: flex;
+  }
+  
+  .podesavanja {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: nowrap;
+      justify-content: space-around;
+      align-items: center;
+  }
+  
+  .input{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  .varijable{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  body{
+    margin: 0px;
+    display: flex;
+    height: auto;
+    justify-content: center;
+  }
+  
+  img{
+      border: 30px solid red;
+      border-color: var(--bojaBordera);
+      height: 534px;
+      width: 419px;    
+  }
+  
+  .SVE{
+    border: 1px solid red;
+    display: flex;
+    position: relative;
+  }
+  
+  .XYnn{
+    box-sizing: border-box;
+    position: absolute;
+    top: calc(calc(-00*10.24px) + 562.55px);
+    left: calc(calc(00*10.217px) + 63.764px);
+    height: 8.25px;
+    width: 8.2333px;
+    border-width: var(--sirinaBordera);
+    border-style: var(--stilBordera);
+    border-color: var(--bojaBordera);
+    /* border: 2px solid rgb(211, 255, 0) ; */
+    border-radius: 3rem;
+    background-color: var(--bojaSredineKruga); 
+  }
+  .product{
+    box-sizing: border-box;
+    position: absolute;
+    top: calc(calc(-00*10.24px) + 562.55px);
+    left: calc(calc(00*10.217px) + 63.764px);
+    height: 8.25px;
+    width: 8.2333px;
+    border-width: var(--sirinaBordera);
+    border-style: var(--stilBordera);
+    border-color: var(--bojaBordera);
+    border-radius: 3rem;
+    background-color: var(--bojaSredineKruga); 
+  }
+  
+  .triangle{
+    width: 0;
+    height: 0;
+    border: 4.16px solid transparent;
+    border-top: 0;
+    border-bottom: 8.25px solid red;
+    border-bottom-color: var(--bojaBordera);
+    box-sizing: border-box;
+    position: absolute;
+    top: calc(calc(-00*10.24px) + 562.55px);
+    left: calc(calc(00*10.217px) + 63.764px);
+    background-color: var(--bojaSredineKruga); 
+  }  
+
+  .star {
+    position: absolute;
+    display: block;
+    color: var(--bojaBordera);
+    width: 0px;
+    height: 0px;
+    border-right: var(--half-size) solid transparent;
+    border-bottom: calc(var(--half-size) * 0.7) solid var(--bojaBordera);
+    border-left: var(--half-size) solid transparent;
+    transform: rotate(35deg);
+    box-sizing: border-box;
+    top: calc(calc(-00*10.24px) + 565.55px);
+    left: calc(calc(00*10.217px) + 63.964px);
+  }
+  .star:before {
+    border-bottom: calc(var(--half-size) * 0.8) solid var(--bojaBordera);
+    border-left: calc(var(--half-size) * 0.3) solid transparent;
+    border-right: calc(var(--half-size) * 0.3) solid transparent;
+    position: absolute;
+    height: 0;
+    width: 0;
+    top: calc(var(--half-size) * 0.45 * -1);
+    left: calc(var(--half-size) * 0.65 * -1);
+    display: block;
+    transform: rotate(-35deg);
+    content: '';
+  }
+  .star:after {
+    position: absolute;
+    display: block;
+    color: var(--bojaBordera);
+    top: calc(var(--half-size) * 0.03);
+    left: calc(var(--half-size) * -1.05);
+    width: 0px;
+    height: 0px;
+    border-right: var(--half-size) solid transparent;
+    border-bottom: calc(var(--half-size) * 0.7) solid var(--bojaBordera);
+    border-left: var(--half-size) solid transparent;
+    transform: rotate(-70deg);
+    content: '';
+  }
+
+  .TiL{
+    height: 8.25px;
+    width: 8.2333px;
+    background: linear-gradient( -45deg, var(--bojaBordera), var(--bojaBordera) 49%, white 49%,  var(--bojaSredineKruga) 51% ); 
+    border-radius: 50%;
+    box-sizing: border-box;
+    position: absolute;
+    top: calc(calc(-00*10.24px) + 562.55px);
+    left: calc(calc(00*10.217px) + 63.764px);
+    border-color: var(--bojaBordera);
+    background-color: var(--bojaSredineKruga); 
+  } 
+  .LiH{
+    height: 8.25px;
+    width: 8.2333px;
+    background: linear-gradient( 180deg, var(--bojaBordera), var(--bojaBordera) 49%, white 49%,  var(--bojaSredineKruga) 51% ); 
+    border-radius: 50%;
+    box-sizing: border-box;
+    position: absolute;
+    top: calc(calc(-00*10.24px) + 562.55px);
+    left: calc(calc(00*10.217px) + 63.764px);
+    border-color: var(--bojaBordera);
+    background-color: var(--bojaSredineKruga); 
+  } 
+  .TiH{
+    box-sizing: border-box;
+    position: absolute;
+    top: calc(calc(-00*10.24px) + 562.55px);
+    left: calc(calc(00*10.217px) + 63.764px);
+    height: 8.25px;
+    width: 8.2333px;
+    border-radius: 3rem;
+    background: conic-gradient(var(--bojaBordera) 50%, rgb(0, 255, 51) 0 180%);
+  }
+  .TiLiH {
+    box-sizing: border-box;
+    position: absolute;
+    top: calc(calc(-00*10.24px) + 562.55px);
+    left: calc(calc(00*10.217px) + 63.764px);
+    height: 8.25px;
+    width: 8.2333px;
+    border-radius: 3rem;
+    background: conic-gradient(var(--bojaBordera) 33%, rgb(0, 255, 51) 0 66%, var(--bojaSredineKruga) 0);
+  }
+
+  .netacan {
+    clip-path: polygon(0 40%, 0 60%, 100% 60%, 100% 40%);
+    box-sizing: border-box;
+    height: 8.25px;
+    width: 8.2333px;
+    position: absolute;
+    top: calc(calc(-00*10.24px) + 562.55px);
+    left: calc(calc(00*10.217px) + 63.764px);
+    background: var(--bojaBordera);
+  }
