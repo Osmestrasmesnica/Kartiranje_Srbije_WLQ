@@ -1,0 +1,37 @@
+[{
+		"Redni_broj": 1,
+		"Tip_podatka": "Terenski",
+		"Vrsta": "Epipogium aphyllum",
+		"Podvrsta": null,
+		"Pun_naziv": "Epipogium aphyllum",
+		"Lokalitet": "Resavska klisura-Beljanica planina",
+		"PROBA10x10": "EP58"
+	},
+	{
+		"Redni_broj": 2,
+		"Tip_podatka": "Herbarski",
+		"Vrsta": "Cephalanthera rubra",
+		"Podvrsta": null,
+		"Pun_naziv": "Cephalanthera rubra",
+		"Lokalitet": "kanjon Lazareve reke (Zlotska klisura)",
+		"PROBA10x10": "EP78"
+	},
+	{
+		"Redni_broj": 3,
+		"Tip_podatka": "Literaturni",
+		"Vrsta": "Epipactis helleborine",
+		"Podvrsta": "helleborine",
+		"Pun_naziv": "Epipactis helleborine subsp. helleborine",
+		"Lokalitet": "kanjon Lazareve reke (Zlotska klisura)",
+		"PROBA10x10": "EP77"
+	},
+	{
+		"Redni_broj": 4,
+		"Tip_podatka": "Literaturni",
+		"Vrsta": "Epipactis helleborine",
+		"Podvrsta": "helleborine",
+		"Pun_naziv": "Epipactis helleborine subsp. helleborine",
+		"Lokalitet": "kanjon Lazareve reke (Zlotska klisura)",
+		"PROBA10x10": "EN77"
+	}
+]
