@@ -59,7 +59,9 @@ import data from './veliki.json' assert { type: 'json' };
 console.log(data);
 console.log(data);
 
-import proba123 from './severoistočnaSRB.json' assert { type: 'json' };
+// import proba123 from './severoistočnaSRB.json' assert { type: 'json' };
+import proba123 from './sviPodaci.json' assert { type: 'json' };
+
 console.log(proba123);
 
 
@@ -70,7 +72,7 @@ console.log(proba123);
   //!Konstanta koja sadrži podatke sa svim vrstama za koje postoje UTM10x10 kvadratići, pritom moraju da su lepo nazvani tj da sadrži 4 karatkera (potencialno napraviti da su prve 2 slova, druge 2 broj), da nisu prazne/0, da ne piše "Neprecizan podatak" 
   //!Kolona gde su UTM kvadratići se ovde zove PROBA10x10 i bilo bi lepo da se uniformiše kako će se ova kolona zvati u EXCELU
   const podaciUTM = proba123.filter(podatak => (
-    podatak.PROBA10x10 !== undefined && podatak.PROBA10x10 !== "Neprecizan podatak"  /*&& podatak.Tip_podatka == "Terenski"*/
+    podatak.UTM_10x10 !== undefined && podatak.UTM_10x10 !== "Neprecizan podatak"  /*&& podatak.Tip_podatka == "Terenski"*/
   ));
   console.log(podaciUTM);
   console.table(podaciUTM);
@@ -80,8 +82,8 @@ console.log(proba123);
   //TODO obratiti pažnju koje sve kolone sadrži (primer je i.Redni_broj, i.Pun_naziv), proveriti iz originalne Excel tabele i eventualno dodaješ po potrebi šta želiš ovde
   var lepPrikaz = podaciUTM.map( i => {
     return {
-      vrsta: i.Pun_naziv,
-      utm10x10: i.PROBA10x10,
+      vrsta: i.PunNaziv,
+      utm10x10: i.UTM_10x10,
       podatak: i.Tip_podatka
     } 
   });
@@ -89,7 +91,7 @@ console.log(proba123);
   
 
   //!Spisak svih vrsta
-  const vrsteUTM = podaciUTM.map(vrste => vrste.Pun_naziv)
+  const vrsteUTM = podaciUTM.map(vrste => vrste.PunNaziv)
   console.log(vrsteUTM);
   console.table(vrsteUTM);
   //!Koliko koje
@@ -112,7 +114,7 @@ console.log(proba123);
   //todo u sustini za svaku vrstu treba pronaci sve UTM10x10 gde se ona nalazi, nije bitno kako ali da mozes da se primeni na veliko
 
   //!Vrednosti svih 10x10 kvadratica
-  const podaciUTM10 = podaciUTM.map(podatak => podatak.PROBA10x10)
+  const podaciUTM10 = podaciUTM.map(podatak => podatak.UTM_10x10)
   console.log(podaciUTM10);
 
 
