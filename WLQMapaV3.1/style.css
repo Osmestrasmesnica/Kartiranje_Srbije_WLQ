@@ -228,17 +228,6 @@
     background-color:  var(--bojaH); 
   } 
 
-  .sumnjiv {
-    content :\003F;
-    box-sizing: border-box;
-    height: 8.25px;
-    width: 8.2333px;
-    position: absolute;
-    top: calc(calc(-00*10.24px) + 562.55px);
-    left: calc(calc(00*10.217px) + 63.764px);
-    background: black;
-  }
-
   .netacan {
     clip-path: polygon(0 40%, 0 60%, 100% 60%, 100% 40%);
     box-sizing: border-box;
@@ -250,46 +239,44 @@
     background: black;
   }
 
-.netacanX {
-  clip-path: polygon(20% 0%, 0% 20%, 30% 50%, 0% 80%, 20% 100%, 50% 70%, 80% 100%, 100% 80%, 70% 50%, 100% 20%, 80% 0%, 50% 30%);
-  box-sizing: border-box;
-  height: 8.25px;
-  width: 8.2333px;
-  position: absolute;
-  top: calc(calc(-00*10.24px) + 562.55px);
-  left: calc(calc(00*10.217px) + 63.764px);
-  background: var(--bojaT);
-}
-.zvezda {
-  clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
-  box-sizing: border-box;
-  height: 8.25px;
-  width: 8.2333px;
-  position: absolute;
-  top: calc(calc(-00*10.24px) + 562.55px);
-  left: calc(calc(00*10.217px) + 63.764px);
-  background: var(--bojaT);
-}
+  .netacanX {
+    clip-path: polygon(20% 0%, 0% 20%, 30% 50%, 0% 80%, 20% 100%, 50% 70%, 80% 100%, 100% 80%, 70% 50%, 100% 20%, 80% 0%, 50% 30%);
+    box-sizing: border-box;
+    height: 8.25px;
+    width: 8.2333px;
+    position: absolute;
+    top: calc(calc(-00*10.24px) + 562.55px);
+    left: calc(calc(00*10.217px) + 63.764px);
+    background: var(--bojaT);
+  }
 
-.sumnjiv {
-  display: block;
-  background: #4444ff;
-  color: #fff;
-  border-radius: 50%;
-  height: 9px; /*8.25px*/
-  position: absolute;
-  top: calc(calc(-00*10.24px) + 562.05px);
-  left: calc(calc(00*10.217px) + 62.064px);
-  width: 9.0202px; /*8.2333px*/
-  line-height: 40px;
-  text-align: center;
-  font-size: 20px;
-  font-family: Verdana;
-  content: "";
-  background: url('https://api.iconify.design/eva/question-mark-circle-outline.svg') no-repeat center center  / contain;
-}
+  .zvezda {
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+    box-sizing: border-box;
+    height: 8.25px;
+    width: 8.2333px;
+    position: absolute;
+    top: calc(calc(-00*10.24px) + 562.55px);
+    left: calc(calc(00*10.217px) + 63.764px);
+    background: var(--bojaT);
+  }
 
+  .sumnjiv {
+    display: block;
+    background: #4444ff;
+    color: #fff;
+    border-radius: 50%;
+    height: 9px; /*8.25px*/
+    position: absolute;
+    top: calc(calc(-00*10.24px) + 562.05px);
+    left: calc(calc(00*10.217px) + 62.064px);
+    width: 9.0202px; /*8.2333px*/
+    line-height: 40px;
+    text-align: center;
+    font-size: 20px;
+    font-family: Verdana;
+    content: "";
+    background: url('https://api.iconify.design/eva/question-mark-circle-outline.svg') no-repeat center center  / contain;
+  }
 
-
-  /*todo dodati za USMENI podatak */
-  /*todo dodati za SUMNJIV i NEPRECIZAN podatak */
+  /*todo dodati za NEPRECIZAN podatak */
