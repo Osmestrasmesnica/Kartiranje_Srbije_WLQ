@@ -1,0 +1,178 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bojaL: #2f2f2f;
+  --bojaH: #008000;
+  --bojaF: #ff0000;
+  --sirinaBordera: 2px  ;
+  --stilBordera: solid ;
+  --size: 8px;
+  --half-size: calc(var(--size) / 2);
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Lato", sans-serif;
+  background-color: #848d86;
+  margin: 1em;
+  line-height: 1.5;
+  height: 100%;
+  justify-content: center;
+}
+
+.wlq{
+    display: flex; /** ovo si doda0 */
+    flex-direction: column; /** ovo si doda0 */
+    max-height: 100%;
+    border: 5px black dotted;
+}
+
+.container {
+  background-color: red;
+  display: flex;
+  flex-direction: column;
+}
+
+.map-container {
+  width: 100%;
+  display: flex;
+}
+
+img {
+width: 100%;
+height: auto;
+float: none;
+}
+
+@media only screen and (min-width:590px) {
+  body{
+    background-color: pink;
+    height: calc(100vh - 2em - 1px); /** Dodao si i ovo*/
+  }
+  .container {
+    background-color: rgb(200, 0, 255);
+    display: flex;
+    flex-direction: row;
+  }
+  img {
+    float: left;
+    max-height: 86.5vh; /**Dodao si i ovo*/
+  }
+  .input-container{
+    justify-content: space-between;
+  }
+}
+
+nav {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  background-color: hsl(131, 90%, 44%);
+  align-items: center;
+  padding: 1rem 1.5rem;
+  border-radius: 0.4rem;
+}
+nav .logo {
+  font-weight: 700;
+}
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+nav a {
+  text-decoration: none;
+  color: white;
+}
+nav #toggle,
+nav label {
+  display: none;
+}
+/* 40.625em to px: 40.625 * 16 = 652 px (1em is equivalent to 16px) */
+/* 1000px to em: 1000 / 16 = 62.5 em */
+@media (max-width: 62.5rem) {
+  nav .menu {
+    width: 100%;
+    height: 0;
+    overflow: hidden;
+  }
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+    padding: 0.5rem 0;
+  }
+  nav label {
+    display: inline-flex;
+    color: white;
+    cursor: pointer;
+  }
+  nav #toggle:checked ~ .menu {
+    height: 100%;
+  }
+}
+
+.input-container{
+  background-color: rgb(223, 175, 175);
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  padding: 0.5rem;
+}
+
+  .input-container > * {
+  border: 2px red dotted;
+  }
+
+  .variables{
+    display: flex;
+    padding: 0.5rem;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .variables div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0.5rem 0.1rem;
+    text-align: center;
+    width: 33.33%;
+  }
+
+  .variables label {
+    display: block;
+  }
+  
+  .variables input[type="color"] {
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 50%;
+    border: none;
+    outline: none;
+    appearance: none;
+    background-color: transparent;
+    cursor: pointer;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+  }
+   
+  input[type="color"]::-webkit-color-swatch {
+    border-radius: 50%;
+    border: 0.2em solid #0bd530;
+  }
+  
+  input[type="color"]::-moz-color-swatch {
+    border-radius: 50%;
+    border: 0.2em solid #0bd530;
+  } 
+
+  /*veličina dugmeta treba da bude minimum 2.75rem tj oko 10mm*/

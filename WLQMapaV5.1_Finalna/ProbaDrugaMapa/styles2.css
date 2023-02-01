@@ -1,0 +1,161 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bojaL: #2f2f2f;
+  --bojaH: #008000;
+  --bojaF: #ff0000;
+  --sirinaBordera: 2px  ;
+  --stilBordera: solid ;
+  --size: 8px;
+  --half-size: calc(var(--size) / 2);
+}
+
+body {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Lato", sans-serif;
+  /* margin: 1rem; */
+  line-height: 1.5;
+  height: 100%;
+  min-width: 250px;
+}
+
+body > * {outline: 5px yellow dotted;}
+
+.container {
+  background-color: gainsboro;
+  display: flex;
+  flex-direction: column;
+}
+
+.map-container {
+  width: 100%;
+  display: flex;
+}
+
+img {
+width: 100%;
+height: auto;
+float: none;
+}
+
+@media only screen and (min-width:890px) {
+  body{
+    background-color: rgb(25, 228, 188);
+    max-height: 100vh;
+  }
+  .container {
+    background-color: gainsboro;
+    display: flex;
+    flex-direction: row;
+  }
+  img {
+    float: left;
+    max-height: 100%;
+  }
+}
+
+nav {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  background-color: #0bd530;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  border-radius: 0.4rem;
+}
+nav .logo {
+  font-weight: 700;
+}
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+nav a {
+  text-decoration: none;
+  color: white;
+}
+nav #toggle,
+nav label {
+  display: none;
+}
+/* 40.625em to px: 40.625 * 16 = 652 px (1em is equivalent to 16px) */
+/* 1000px to em: 1000 / 16 = 62.5 em */
+@media (max-width: 62.5em) {
+  nav .menu {
+    width: 100%;
+    height: 0;
+    overflow: hidden;
+  }
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+    padding: 0.5rem 0;
+  }
+  nav label {
+    display: inline-flex;
+    color: white;
+    cursor: pointer;
+  }
+  nav #toggle:checked ~ .menu {
+    height: 100%;
+  }
+}
+
+.input-container{
+  background-color: rgb(223, 175, 175);
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  padding: 0.5rem;
+}
+
+.variables{
+  display: flex;
+  padding: 1rem;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.variables div {
+  padding: 1em 0;
+  text-align: center;
+  width: 33.33%;
+}
+
+.variables label {
+  display: block;
+  margin-bottom: 0.5em;
+  margin-right: 0.5em;
+}
+
+.variables input[type="color"] {
+  width: 4.5rem;
+  height: 4.5rem;
+  border-radius: 50%;
+  border: none;
+  outline: none;
+  appearance: none;
+  background-color: transparent;
+  cursor: pointer;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+input[type="color"]::-webkit-color-swatch {
+  border-radius: 50%;
+  border: 0.2em solid #0bd530;
+}
+input[type="color"]::-moz-color-swatch {
+  border-radius: 50%;
+  border: 0.2em solid #0bd530;
+}
