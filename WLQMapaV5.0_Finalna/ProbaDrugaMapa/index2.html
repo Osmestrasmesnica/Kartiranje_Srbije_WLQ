@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="DQ">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" contDQt="IE=edge">
+    <meta name="viewport" contDQt="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles2.css" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.15.6/xlsx.core.min.js"></script>
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+    <title>WLQ_UTM</title>
+</head>
+<body>
+  <div class="container">
+    <div class="map-container" id="map">
+        <svg style="background-image: url('../assets/map.jpg');">
+            <g class="grid-lines"></g>
+        </svg>
+        <div class="coordinates" id="coordinates"></div>
+        <div class="products" id="products"></div>
+    </div>
+      
+    <div class="settings"> 
+      <div class="input-container">
+            <button id="excel-button">Excel → JSON</button>
+
+            <button onclick="importJSON().then(data => {
+                WlqData = data;
+                console.log(WlqData);
+                showUniqueData();
+            });">Import JSON</button>
+
+            <select id="headerSelect" onchange="showProbaData()">
+                <option value="">-- Row with 10x10 UTM --</option>
+            </select>
+            
+            <p>
+                <input type="button" class="btn" onclick="populateSelect()" value="Load existing species"/>
+            </p>
+            
+            <select id="selected" onchange="show(this)">
+                <option value="">-- Select taxon --</option>
+            </select>
+            
+            
+            <input type="text" id="selectTaxon" placeholder="Choose order or taxon" onchange="myFunction()">
+            <p id="msg"></p>
+            <p>selected species is:<span id="selectedTaxon"></span></p>
+            
+            <button type="button" class="loadTaxa" id="loadTaxa">Load taxon</button>
+            <button type="button" class="addTaxa" id="addTaxa">Add taxon</button>
+            <button type="button" class="button btn-secondary" id="button">All data from database</button>
+           
+            <input type="text" name="inputText" id="inputText" class="search" placeholder="Add 10x10 UTM">            
+            <button type="button" class="btn btn-primary">ADD</button>
+        </div>  
+        <div class="variables">
+            <label for="colorF">Field data</label>
+            <input id="colorF" type="color" name="colorF" value="#3af700">        
+            <label for="colorL">Literary data</label>
+            <input id="colorL" type="color" name="colorL" value="#1d00f7">
+            <label for="colorH">Herbarium data</label>
+            <input id="colorH" type="color" name="colorH" value="#e7f700">
+            <!-- <label for="borderWidth">Circle border width:</label>
+            <input id="borderWidth" type="range" name="borderWidth" min="0" max="4" value="2" data-sizing="px" step="0.2"> -->
+        </div>
+    </div>  
+  </div>
+  <script src="UTMgrid.js"></script>
+  <script src=""></script>
+  <script src=""></script>
+  <script src=""></script>
+  <script src=""></script>
+  <script src=""></script>
+</body>
+</html>
