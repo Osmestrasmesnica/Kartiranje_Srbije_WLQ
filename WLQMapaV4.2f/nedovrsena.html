@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Map of Serbia</title>
+  <script src="https://d3js.org/d3.v4.min.js"></script>
+  <script src="https://unpkg.com/topojson@3"></script>
+  <style>
+    /* set the dimensions and margins of the map */
+    #map {
+      width: 600px;
+      height: 400px;
+    }
+  </style>
+</head>
+<body>
+  <!-- create an SVG element for the map -->
+  <svg id="map"></svg>
+  <script>
+    // set the projection and path generator
+    var projection = d3.geoMercator()
+                      .center([19.5, 44.5])
+                      .scale(5000)
+                      .translate([300, 200]);
+    var path = d3.geoPath().projection(projection);// load and display the map data
+d3.json("https://raw.githubusercontent.com/holtzy/D3-graph-gallery/master/DATA/world.geojson", function(error, data) {
+  if (error) throw error;
+
+  // bind data and create one path per GeoJSON feature
+  var countries = d3.select("#map")
+                   .selectAll("path")
+                   .data(data.features)
+                   .enter()
+                   .append("path")
+                   .attr("d", path)
+                   .attr("class", "country");
+
+  // set the default style for all countries
+  countries.style("fill", "#ccc");
+
+  // set the style for Serbia
+  d3.selectAll(".country")
+    .filter(function(d) { return d.properties.name === "Serbia"; })
+    .style("fill", "green");
+});
+</script>
+</body>
+</html>
+
+

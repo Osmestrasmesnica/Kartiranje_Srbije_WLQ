@@ -1,0 +1,80 @@
+.map-container {
+    position: relative;
+}
+
+img {
+    position: absolute;
+    height: 100%;
+    width: auto;
+}
+
+@media (min-width: 768px) {
+    img {
+        height: 90%;
+        width: auto;
+    }
+}
+
+/* Global styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Reusable class for text */
+  .text-center {
+    text-align: center;
+  }
+  
+  /* Reusable class for buttons */
+  .btn {
+    padding: 10px 20px;
+    border-radius: 5px;
+    background-color: #0077ff;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 600;
+  }
+  
+  /* Container for the entire page */
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  /* Main section of the page */
+  .main-section {
+    flex: 1;
+    padding: 20px;
+  }
+  
+  /* Sidebar of the page */
+  .sidebar {
+    flex: 0 0 300px;
+    padding: 20px;
+  }
+  
+  /* Individual items within the sidebar */
+  .sidebar .sidebar-item {
+    margin-bottom: 20px;
+  }
+  
+  /* Image within the main section */
+  .main-section img {
+    width: 100%;
+    height: auto;
+  }
+  
+  /* Specific styles for screens larger than 768px */
+  @media (min-width: 768px) {
+    .container {
+      flex-wrap: nowrap;
+    }
+    .main-section {
+      flex: 2;
+    }
+  }
+  
