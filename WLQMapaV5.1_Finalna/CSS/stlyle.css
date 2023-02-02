@@ -54,11 +54,10 @@ float: none;
 
 @media only screen and (min-width:590px) {
   body{
-    background-color: pink;
+    background-color: rgb(228, 255, 178);
     height: calc(100vh - 2em - 1px); /** Dodao si i ovo*/
   }
   .container {
-    background-color: rgb(200, 0, 255);
     display: flex;
     flex-direction: row;
   }
@@ -175,4 +174,4 @@ nav label {
     border: 0.2em solid #0bd530;
   } 
 
-  /*veličina dugmeta treba da bude minimum 2.75rem tj oko 10mm*/
+  /*veličina dugmeta treba da bude minimum 2.75rem tj oko 10mm*/  
