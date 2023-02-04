@@ -52,7 +52,7 @@ height: auto;
 float: none;
 }
 
-@media only screen and (min-width:590px) {
+@media only screen and (min-width:680px) {
   body{
     background-color: rgb(228, 255, 178);
     height: calc(100vh - 2em - 1px); /** Dodao si i ovo*/
@@ -70,15 +70,17 @@ float: none;
   }
 }
 
+/*! nav menu */
 nav {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  background-color: hsl(131, 90%, 44%);
+  background-color: #38D2D2;
   align-items: center;
   padding: 1rem 1.5rem;
-  border-radius: 0.4rem;
+  background-image: radial-gradient(93% 87% at 87% 89%, rgba(0, 0, 0, 0.23) 0%, transparent 86.18%), radial-gradient(66% 66% at 26% 20%, rgba(255, 255, 255, 0.55) 0%, rgba(255, 255, 255, 0) 69.79%, rgba(255, 255, 255, 0) 100%);
+  box-shadow: inset -3px -3px 9px rgba(255, 255, 255, 0.25), inset 0px 3px 9px rgba(255, 255, 255, 0.3), inset 0px 1px 1px rgba(255, 255, 255, 0.6), inset 0px -8px 36px rgba(0, 0, 0, 0.3), inset 0px 1px 5px rgba(255, 255, 255, 0.6), 2px 19px 31px rgba(0, 0, 0, 0.2);
 }
 nav .logo {
   font-weight: 700;
@@ -118,6 +120,28 @@ nav label {
     height: 100%;
   }
 }
+/*proba*/
+
+/*proba*/
+  input{
+    border: 0.2em solid #38D2D2;
+    background-color: whitesmoke;
+    text-align: center;
+    padding: 0.5em;
+    width: 80%;
+    height: 2em;
+    border-radius: 1em;
+    outline: 0;
+    margin: 0.25rem;
+  }
+  input:focus{  
+    box-shadow: inset -3px -3px 9px rgba(255, 255, 255, 0.25), inset 0px 3px 9px rgba(255, 255, 255, 0.3), inset 0px 1px 1px rgba(255, 255, 255, 0.6), inset 0px -8px 36px rgba(0, 0, 0, 0.3), inset 0px 1px 5px rgba(255, 255, 255, 0.6), 2px 19px 31px rgba(0, 0, 0, 0.2);
+    background-color: #38D2D2;
+    border: 0.2em solid #d0ff00;
+    box-shadow: 0 0 0.5em #38D2D2;
+    outline: 0;
+  }
+
 
 .input-container{
   background-color: rgb(223, 175, 175);
@@ -131,6 +155,7 @@ nav label {
   border: 2px red dotted;
   }
 
+  /*! choose color for type of data */
   .variables{
     display: flex;
     padding: 0.5rem;
@@ -149,9 +174,12 @@ nav label {
 
   .variables label {
     display: block;
+    /* font-size: 1rem */
   }
   
   .variables input[type="color"] {
+    padding: 0;
+    margin: 0;
     width: 3.5rem;
     height: 3.5rem;
     border-radius: 50%;
@@ -166,12 +194,73 @@ nav label {
    
   input[type="color"]::-webkit-color-swatch {
     border-radius: 50%;
-    border: 0.2em solid #0bd530;
+    border: 0.2em solid #38D2D2;
   }
   
   input[type="color"]::-moz-color-swatch {
     border-radius: 50%;
-    border: 0.2em solid #0bd530;
+    border: 0.2em solid #38D2D2;
   } 
 
-  /*veličina dugmeta treba da bude minimum 2.75rem tj oko 10mm*/  
+
+  /*!veličina dugmeta treba da bude minimum 2.75rem tj oko 10mm*/  
+ button {
+  box-sizing: border-box;
+  margin: 0.25rem;
+  color:  black;
+  font-family: "Basier circle",-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+  padding: 0.5rem 1rem;
+  background-color: #fff;
+  box-shadow: inset -3px -3px 9px rgba(255, 255, 255, 0.25), inset 0px 3px 9px rgba(255, 255, 255, 0.3), inset 0px 1px 1px rgba(255, 255, 255, 0.6), inset 0px -8px 36px rgba(0, 0, 0, 0.3), inset 0px 1px 5px rgba(255, 255, 255, 0.6), 2px 19px 31px rgba(0, 0, 0, 0.2);
+  font-weight: bold;
+  text-decoration: none #0d172a solid;
+  transition: all 0.1s cubic-bezier(.4, 0, .2, 1);
+  border: 0;
+  border-radius: 1rem;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  cursor: pointer;
+}
+
+button:hover {
+  box-shadow: inset -3px -3px 9px rgba(255, 255, 255, 0.25), inset 0px 3px 9px rgba(255, 255, 255, 0.3), inset 0px 1px 1px rgba(255, 255, 255, 0.6), inset 0px -8px 36px rgba(0, 0, 0, 0.3), inset 0px 1px 5px rgba(255, 255, 255, 0.6), 2px 19px 31px rgba(0, 0, 0, 0.2);
+  background-color: #38D2D2;
+  color: #fff;
+  box-shadow: 0 0 0 0.15rem #5ceace;
+}
+
+/*! signle 10x10 UTM */
+/* signle 10x10 UTM container */
+.grp_add10x10 {
+  margin: 0.25rem;;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/* signle 10x10 UTM input */
+.add10x10 {
+  margin: 0;
+  border-radius: 0;
+  border-top-left-radius: 1em;
+  border-bottom-left-radius: 1em;
+}
+/* signle 10x10 UTM button */
+.btn10x10 {
+  display: flex;
+  min-height: 0;
+  border-radius: 0;
+  margin: 0;
+  border: none;
+  cursor: pointer;
+  height: 2em;
+  border-top-right-radius: 1em;
+  border-bottom-right-radius: 1em;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+/*! load and add taxon */
+
