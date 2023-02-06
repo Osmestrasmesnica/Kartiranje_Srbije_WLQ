@@ -1,7 +1,25 @@
+const waitForWlqData = new Promise(resolve => {
+    if (WlqData) {
+      resolve();
+    } else {
+      const intervalId = setInterval(() => {
+        if (WlqData) {
+          clearInterval(intervalId);
+          resolve();
+        }
+      }, 50);
+    }
+  });
+  
+  waitForWlqData.then(() => {
+    console.log(WlqData);
+    // your code here
+ 
+  
 // //*Lokalno importovanje
 // import proba123 from './asd.json' assert { type: 'json' };
 // console.log(proba123);
-
+console.log(WlqData);
 //TODO promeniti u skladu sa kako si nazvao array sa podacima (ovde je proba123) 
 //TODO promeniti zaglavlje kolone ako nije ustanovljen uniformni naziv (ovde je UTM_10x10)
 //!Konstanta koja sadrži podatke sa svim vrstama za koje postoje UTM10x10 kvadratići, pritom moraju da su lepo nazvani tj da sadrži 4 karatkera (potencialno napraviti da su prve 2 slova, druge 2 broj), da nisu prazne/0, da ne piše "Neprecizan podatak" 
@@ -18,7 +36,7 @@
 //TODO obratiti pažnju koje sve kolone sadrži (primer je i.Redni_broj, i.Pun_naziv), proveriti iz originalne Excel tabele i eventualno dodaješ po potrebi šta želiš ovde
   var lepPrikaz = podaciUTM.map( i => {
     return {
-      vrsta: i.PunNaziv,
+      vrsta: i.PunNazivTaksonaTaksona,
       utm10x10: i.UTM_10x10,
       podatak: i.Tip_podatka
     } 
@@ -27,7 +45,7 @@ console.log(lepPrikaz);
   
 
 //*Spisak svih vrsta
-  const vrsteUTM = podaciUTM.map(vrste => vrste.PunNaziv)
+  const vrsteUTM = podaciUTM.map(vrste => vrste.PunNazivTaksona)
 //console.log(vrsteUTM);
 //console.table(vrsteUTM);
 //*Koliko koje
@@ -144,3 +162,4 @@ for (let i=0; i < kockice.length; i++) {
    //todo napraviti da mozes da biras koja vrsta je koje boje
    //todo napraviti da velicina kruzica u kvadraticima zavisi od ukupnog broja podataka u datom kvadraticu
    //todo PROMENITI SLIKU POZADINE I NAPRAVITI UTM grid za nju i odrediti poziciju slike (top: nn px; left: nn px) 
+});

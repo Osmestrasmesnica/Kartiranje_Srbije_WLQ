@@ -3,7 +3,6 @@ let filteredData; //*! sto ne radi ovo globalna varijabla */
 function populateSelect() {
     // Filter data based on specific conditions
     const filteredData = WlqData.filter(item => item.UTM_10x10 !== undefined && item.UTM_10x10 !== "Neprecizan podatak");
-    filteredDataF(filteredData); //! a nece ni ovako*/
     // Create a new object with relevant properties
     const mappedData = filteredData.map(item => {
                 return {
