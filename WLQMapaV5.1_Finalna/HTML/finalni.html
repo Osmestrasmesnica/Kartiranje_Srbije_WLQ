@@ -20,14 +20,29 @@
         <label for="toggle"><i class="material-icons">menu</i></label>
         <div class="menu">
          <ul>
-          <li><a href="#">Excel → JSON</a></li>
-          <li><a href="#">Import JSON</a></li>
-          <li><a href="#">Download picture</a></li>
-          <!-- ova dva bih premestio u deo kada stisnem LOGO, kao i LOG OUT, i my PROFILE -->
-          <li><a href="#">My Profile</a></li> 
+          <li><a href="#" id="excel-button">Excel → JSON</a></li>
+          <li><a href="#">Import</a>
+            <ul>
+              <li><a href="#" onclick="importJSON().then(data => {
+                WlqData = data;
+                filtrirani = data.filter(item => item.UTM_10x10 !== undefined && item.UTM_10x10 !== `Neprecizan podatak`);
+                console.log(WlqData);
+                console.log(filtrirani);
+                showUniqueData();
+              });">JSON</a></li>
+              <li><a href="#">EXCEL</a></li>
+              <li><a href="#">CSV</a></li>
+            </ul>
+          </li>
+          <li><a href="#">Export</a>
+            <ul>
+              <li><a href="#">as JPG</a></li>
+              <li><a href="#">as TIFF</a></li>
+              <li><a href="#">as Excel</a></li>
+            </ul>          
+          </li>
           <li><a href="#">Contact</a></li> 
           <li><a href="#">About App</a></li>
-          <li><a href="#">Log out</a></li> 
          </ul>
       </div>
     </nav>
@@ -41,32 +56,38 @@
         
       <div class="input-container">
         <div class="inputTaksona">
-          <div class="group-1">
-            <button id="excel-button">Excel → JSON</button>
-            <button onclick="importJSON().then(data => {
-                  WlqData = data;
-                  console.log(WlqData);
-                  showUniqueData();
-                });">Import JSON</button>
+          <div class="utmRow">
             <select id="headerSelect" onchange="showProbaData()">
               <option value="">-- Row with 10x10 UTM --</option>
             </select>
           </div>  
               
-          <div class="group-2">
+          <div class="dataToShow">
             <button type="button" class="btn" onclick="populateSelect()">Load existing taxons</button> 
-            <select id="selected" onchange="show(this)">
+            <select id="selected" onchange="showSelectedValue(this)">
               <option value="">-- Select taxon --</option>
             </select>
+            <!-- <form>
+              <input class="chosen-value" type="text" value="" onchange="showProbaData()" placeholder="Row with 10x10 UTM" >
+              <ul class="value-list">
+                <li>Alabama</li>
+                <li>Alaska</li>
+                <li>Bugarska</li>
+                <li>Makedonija</li>
+                <li>Srbija</li>
+              </ul>
+            </form> -->
             <input type="text" id="selectTaxon" placeholder="Choose order or taxon" onchange="myFunction()">
-            <p id="msg">izabrano</p>
-            <br>
-            <p>selected species is:<span id="selectedTaxon"></span></p>
+            <div class="selectedText">
+              <p id="msg">Selected taxon:</p>
+              <p>Selected order: <span id="selectedTaxon"></span></p>
+            </div>
           </div>   
     
-          <div class="btnTaxa">          
-              <button type="button" class="loadTaxa" id="loadTaxa">Load taxon</button>
-              <button type="button" class="addTaxa" id="addTaxa">Add taxon</button>
+          <div class="btnTaxa">
+            <button type="button" class="loadTaxa" id="loadTaxa">Load taxon</button>
+            <button type="button" class="addTaxa" id="addTaxa">Add taxon</button>
+            <button type="button" class="togetherTaxa" id="togetherTaxa" onclick="filteredDataF()">OBA</button>
           </div>     
         </div>
             
@@ -98,6 +119,10 @@
       </div>     
     </div>
   </div>
-      
+<script src="../JS/dropdownlist.js" ></script>
+<script src="../JS/excelToJson.js" ></script>
+<script src="../JS/importJson.js" ></script>
+<script src="../JS/listOfTaxons.js" ></script>
+<script src="../JS/allData.js" ></script>
 </body>
 </html>

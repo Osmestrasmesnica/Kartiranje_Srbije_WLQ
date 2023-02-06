@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WLQ</title>
+    <link rel="stylesheet" href="../CSS/stlyle.css" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.15.6/xlsx.core.min.js"></script>
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+  <div class="wlq">
+    <nav>
+        <a href="#" class="logo">LOGO</a>
+        <input type="checkbox" name="" id="toggle">
+        <label for="toggle"><i class="material-icons">menu</i></label>
+        <div class="menu">
+         <ul>
+          <li><a href="#">Excel → JSON</a></li>
+          <li><a href="#">Import</a>
+            <ul>
+              <li><a href="#">JSON</a></li>
+              <li><a href="#">EXCEL</a></li>
+              <li><a href="#">CSV</a></li>
+            </ul>
+          </li>
+          <li><a href="#">Export</a>
+            <ul>
+              <li><a href="#">as JPG</a></li>
+              <li><a href="#">as TIFF</a></li>
+              <li><a href="#">as Excel</a></li>
+            </ul>          
+          </li>
+          <li><a href="#">Contact</a></li> 
+          <li><a href="#">About App</a></li>
+         </ul>
+      </div>
+    </nav>
+  
+    <div class="container">
+      <div class="map-container" id="map">
+        <img src="../assets/srbija.jpg" alt="Serbia map">
+        <div class="coordinates" id="coordinates"></div>
+        <div class="products" id="products"></div>
+      </div>
+        
+      <div class="input-container">
+        <div class="inputTaksona">
+          <div class="group-1">
+            <button id="excel-button">Excel → JSON</button>
+            <button onclick="importJSON().then(data => {
+                  WlqData = data;
+                  console.log(WlqData);
+                  showUniqueData();
+                });">Import JSON</button>
+            <select id="headerSelect" onchange="showProbaData()">
+              <option value="">-- Row with 10x10 UTM --</option>
+            </select>
+          </div>  
+              
+          <div class="group-2">
+            <button type="button" class="btn" onclick="populateSelect()">Load existing taxons</button> 
+            <select id="selected" onchange="show(this)">
+              <option value="">-- Select taxon --</option>
+            </select>
+            <input type="text" id="selectTaxon" placeholder="Choose order or taxon" onchange="myFunction()">
+            <p id="msg">izabrano</p>
+            <br>
+            <p>selected species is:<span id="selectedTaxon"></span></p>
+          </div>   
+    
+          <div class="btnTaxa">          
+              <button type="button" class="loadTaxa" id="loadTaxa">Load taxon</button>
+              <button type="button" class="addTaxa" id="addTaxa">Add taxon</button>
+          </div>     
+        </div>
+            
+        <div class="grp_add10x10">  
+          <input type="text" class="add10x10" name="add10x10" id="add10x10"  placeholder="10x10 UTM">          
+          <button type="button" class="btn10x10">ADD</button>
+        </div>
+    
+        <div class="group-4">
+          <button type="button" class="button btn-secondary" id="button"> ALL imported DATA</button>
+        </div>
+            
+        <div class="variables">
+          <div class="coloF">
+            <label for="colorF">Field</label>
+            <input id="colorF" type="color" name="colorF" value="#ff0000">  
+          </div>    
+          <div class="coloL">
+            <label for="colorL">Literary</label>
+            <input id="colorL" type="color" name="colorL" value="#000000">
+          </div>
+          <div class="coloH">          
+            <label for="colorH">Herbar</label>
+            <input id="colorH" type="color" name="colorH" value="#ffffff">
+          </div>
+          <!-- <label for="borderWidth">Circle border width:</label>
+          <input id="borderWidth" type="range" name="borderWidth" min="0" max="4" value="2" data-sizing="px" step="0.2"> -->
+        </div>     
+      </div>     
+    </div>
+  </div>
+      
+</body>
+</html>

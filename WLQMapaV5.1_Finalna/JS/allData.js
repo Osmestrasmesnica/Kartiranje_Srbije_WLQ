@@ -1,13 +1,13 @@
-//*Lokalno importovanje
-  import proba123 from './asd.json' assert { type: 'json' };
-console.log(proba123);
+// //*Lokalno importovanje
+// import proba123 from './asd.json' assert { type: 'json' };
+// console.log(proba123);
 
 //TODO promeniti u skladu sa kako si nazvao array sa podacima (ovde je proba123) 
 //TODO promeniti zaglavlje kolone ako nije ustanovljen uniformni naziv (ovde je UTM_10x10)
 //!Konstanta koja sadrži podatke sa svim vrstama za koje postoje UTM10x10 kvadratići, pritom moraju da su lepo nazvani tj da sadrži 4 karatkera (potencialno napraviti da su prve 2 slova, druge 2 broj), da nisu prazne/0, da ne piše "Neprecizan podatak" 
 //!Kolona gde su UTM kvadratići se ovde zove UTM_10x10 i bilo bi lepo da se uniformiše kako će se ova kolona zvati u EXCELU
 //*Samo oni podaci za koje postoji već UTM odrađen, ovde vidiš šta sve sadrže
-  const podaciUTM = proba123.filter(podatak => (
+  const podaciUTM = WlqData.filter(podatak => (
     podatak.UTM_10x10 !== undefined && podatak.UTM_10x10 !== "Neprecizan podatak"  /*&& podatak.Tip_podatka == "Terenski"*/
   ));
 //console.log(podaciUTM);
