@@ -1,5 +1,5 @@
 //*Lokalno importovanje
-  import proba123 from './asd.json' assert { type: 'json' };
+  import proba123 from './SVESVE.json' assert { type: 'json' };
 console.log(proba123);
 
 //TODO promeniti u skladu sa kako si nazvao array sa podacima (ovde je proba123) 
