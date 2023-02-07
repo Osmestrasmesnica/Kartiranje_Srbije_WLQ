@@ -2,7 +2,7 @@ let filteredData; //*! sto ne radi ovo globalna varijabla */
 // Populate the select element with data from a previously imported JSON file
 function populateSelect() {
     // Filter data based on specific conditions
-    const filteredData = WlqData.filter(item => item.UTM_10x10 !== undefined && item.UTM_10x10 !== "Neprecizan podatak");
+    const filteredData = WlqData.filter(item => item.UTM_10x10 !== undefined && item.UTM_10x10 !== "Neprecizan podatak"); //! ovo treba da ispravis da bira ono sto si selektovao u dropdown//
     // Create a new object with relevant properties
     const mappedData = filteredData.map(item => {
                 return {

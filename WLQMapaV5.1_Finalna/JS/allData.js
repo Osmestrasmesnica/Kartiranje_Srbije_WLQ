@@ -120,8 +120,9 @@ for (let i=0; i < kockice.length; i++) {
   : console.log("nema bato nista");
   
   //*dugme kada pritisneš prepozna koji UTM treba da ubaci i kako menja tipReference u T/L/H/TiL/TiH/LiH/TiLiH
-  let dugme = document.querySelector('#dugme');
+  let dugme = document.querySelector('#btnAllData');
   dugme.addEventListener('click', event => {
+    console.log("ALEKSA E JESI MI KRALJ");
     let prvoSlovo = utmPodatak.substring(0,1);
     let drugoSlovo = utmPodatak.substring(1,2);
     let prviBroj = utmPodatak.substring(2,3);
