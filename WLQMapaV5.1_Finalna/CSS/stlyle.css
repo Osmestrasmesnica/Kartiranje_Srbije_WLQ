@@ -164,7 +164,6 @@ nav ul li ul {
 
 nav ul li ul li {
   margin: 0.5rem;
-	width:100%;
   border-bottom:1px solid var(--clr2);
 }
 
