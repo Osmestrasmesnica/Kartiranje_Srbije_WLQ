@@ -87,8 +87,13 @@ float: none;
   .container {
     display: flex;
     flex-direction: row;
+    max-height: 86.5vh;  /** Dodao si i ovo*/
+  }
+  .map-container {
+    max-width: 555px; /** Dodao si i ovo*/
   }
   img {
+    max-width: 555px; /** Dodao si i ovo*/
     float: left;
     max-height: 86.5vh; /**Dodao si i ovo*/
   }
@@ -100,7 +105,8 @@ float: none;
 /*! nav menu */
 /*! VRATI SE NA OVO*/
 nav {
-  height: auto; /*dodao si ovo*/
+  align-content: center; /**Dodao si i ovo*/
+  height: auto;
   width: 100%;
   display: flex;
   flex-wrap: wrap;
@@ -136,7 +142,7 @@ nav ul li {
 li > a:after { content: ' »'; } /* Change this in order to change the Dropdown symbol */
 li > a:only-child:after { content: ''; }
 nav ul li a {
-	padding:20px;
+	padding:0.5rem; /**preomenio si ovo*/
   display:inline-block;
   color: var(--clr2);
   text-decoration:none;
@@ -225,7 +231,7 @@ nav label {
   display: flex;
   text-align: center;
   flex-direction: column;
-  padding: 0.5rem;
+  /* padding: 0.5rem; */
 }
 
   /* .input-container > * {
@@ -390,7 +396,7 @@ button:hover {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding-bottom: 2rem;
+  /* padding-bottom: 2rem; */
   padding-top: 1rem;
 }
 
