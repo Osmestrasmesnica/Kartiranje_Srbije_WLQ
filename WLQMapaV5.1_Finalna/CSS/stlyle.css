@@ -163,12 +163,15 @@ nav ul li ul {
 }
 
 nav ul li ul li {
+  margin: 0.5rem;
 	width:100%;
   border-bottom:1px solid var(--clr2);
 }
 
 nav ul li:hover ul {
   display:block;
+  width: 100px;
+  padding: 0.5rem;
 }
 
 nav a {
@@ -204,6 +207,15 @@ nav label {
   }
   nav #toggle:checked ~ .menu {
     height: 100%;
+  }
+  nav ul li ul {
+    display:none;
+    position:relative;
+    text-align: center;
+    left:0;
+    background: var(--clr1);
+    float: none;
+    z-index: 2;
   }
 }
 
