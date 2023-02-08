@@ -12,9 +12,9 @@
   --clr-third:#c2a84d ;
   --clr-fourth: #be6c48;
   --clr-fifth: #b55257;
-  --bojaL: #2f2f2f;
-  --bojaH: #008325;
-  --bojaF: #ff0000;
+  --colorH: #2f2f2f;
+  --colorL: #20926C;
+  --colorF: #ff0000;
   --sirinaBordera: 2px  ;
   --stilBordera: solid ;
   --size: 8px;
@@ -205,7 +205,7 @@ nav label {
 /*! input*/
   input{
     border: 0.2em solid var(--clr1);
-    background-color: whitesmoke;
+    background-color: var(--clr3);
     text-align: center;
     padding: 0.5em;
     width: 80%;
@@ -220,9 +220,23 @@ nav label {
     border: 0.2em solid #d0ff00;
     box-shadow: 0 0 0.5em var(--clr1);
     outline: 0;
+    color: var(--clr2);
   }
 
-
+  input::-webkit-input-placeholder {
+    color: var(--clr1);
+ }
+ input::-moz-placeholder {
+    color: var(--clr1);
+ }
+ input:-ms-input-placeholder {
+    color: var(--clr1);
+ }
+ input:-moz-placeholder {
+    color: var(--clr1);
+ }
+ 
+ 
   .input-container{
     background-color: var(--clr2);
     display: flex;
@@ -315,6 +329,7 @@ nav label {
   }
   /* signle 10x10 UTM input */
   .add10x10 {
+    color: var(--clr1);
     margin: 0;
     border-radius: 0;
     border-top-left-radius: 1em;
@@ -516,8 +531,8 @@ nav label {
       transform: translate(-50%, -50%);
       border-width: var(--sirinaBordera);
       border-style: var(--stilBordera);
-      border-color: var(--bojaF);
-      background-color: var(--bojaL); 
+      border-color: var(--colorF);
+      background-color: var(--colorL); 
     }
 
   .product{
@@ -532,8 +547,8 @@ nav label {
     transform: translate(-50%, -50%);
     border-width: var(--sirinaBordera);
     border-style: var(--stilBordera);
-    border-color: var(--bojaF);
-    background-color: var(--bojaL); 
+    border-color: var(--colorF);
+    background-color: var(--colorL); 
   }
 
   .triangle{
@@ -542,12 +557,12 @@ nav label {
     border: 4.16px solid transparent;
     border-top: 0;
     border-bottom: 8.25px solid red;
-    border-bottom-color: var(--bojaF);
+    border-bottom-color: var(--colorF);
     box-sizing: border-box;
     position: absolute;
     top: calc(calc(00 * -1.918%) + calc(100% - 37.8%) + calc(-20 * -1.91%));
     left: calc(calc(00 * 2.440%) + calc(8.4% + 49.5%) + calc(-20 * 2.440%));
-    background-color: var(--bojaL); 
+    background-color: var(--colorL); 
     transform: translate(-50%, -50%);
 
   }  
@@ -555,11 +570,11 @@ nav label {
   .star {
     position: absolute;
     display: block;
-    color: var(--bojaF);
+    color: var(--colorF);
     width: 0px;
     height: 0px;
     border-right: var(--half-size) solid transparent;
-    border-bottom: calc(var(--half-size) * 0.7) solid var(--bojaF);
+    border-bottom: calc(var(--half-size) * 0.7) solid var(--colorF);
     border-left: var(--half-size) solid transparent;
     transform: rotate(35deg);
     box-sizing: border-box;
@@ -569,7 +584,7 @@ nav label {
 
   }
   .star:before {
-    border-bottom: calc(var(--half-size) * 0.8) solid var(--bojaF);
+    border-bottom: calc(var(--half-size) * 0.8) solid var(--colorF);
     border-left: calc(var(--half-size) * 0.3) solid transparent;
     border-right: calc(var(--half-size) * 0.3) solid transparent;
     position: absolute;
@@ -584,13 +599,13 @@ nav label {
   .star:after {
     position: absolute;
     display: block;
-    color: var(--bojaF);
+    color: var(--colorF);
     top: calc(var(--half-size) * 0.03);
     left: calc(var(--half-size) * -1.05);
     width: 0px;
     height: 0px;
     border-right: var(--half-size) solid transparent;
-    border-bottom: calc(var(--half-size) * 0.7) solid var(--bojaF);
+    border-bottom: calc(var(--half-size) * 0.7) solid var(--colorF);
     border-left: var(--half-size) solid transparent;
     transform: rotate(-70deg);
     content: '';
@@ -599,28 +614,28 @@ nav label {
   .TiL{
     height: 1.7%;
     width: 1.9%;
-    background: linear-gradient( -45deg, var(--bojaF), var(--bojaF) 49%, white 49%,  var(--bojaL) 51% ); 
+    background: linear-gradient( -45deg, var(--colorF), var(--colorF) 49%, white 49%,  var(--colorL) 51% ); 
     border-radius: 50%;
     box-sizing: border-box;
     position: absolute;
     top: calc(calc(00 * -1.918%) + calc(100% - 37.8%) + calc(-20 * -1.91%));
     left: calc(calc(00 * 2.440%) + calc(8.4% + 49.5%) + calc(-20 * 2.440%));
-    border-color: var(--bojaF);
-    background-color: var(--bojaL); 
+    border-color: var(--colorF);
+    background-color: var(--colorL); 
     transform: translate(-50%, -50%);
 
   } 
   .LiH{
     height: 1.7%;
     width: 1.9%;
-    background: linear-gradient( 180deg, var(--bojaH), var(--bojaH) 49%, white 49%,  var(--bojaL) 51% ); 
+    background: linear-gradient( 180deg, var(--colorH), var(--colorH) 49%, white 49%,  var(--colorL) 51% ); 
     border-radius: 50%;
     box-sizing: border-box;
     position: absolute;
     top: calc(calc(00 * -1.918%) + calc(100% - 37.8%) + calc(-20 * -1.91%));
     left: calc(calc(00 * 2.440%) + calc(8.4% + 49.5%) + calc(-20 * 2.440%));
-    border-color: var(--bojaH);
-    background-color: var(--bojaL);
+    border-color: var(--colorH);
+    background-color: var(--colorL);
     transform: translate(-50%, -50%);
   
   } 
@@ -632,7 +647,7 @@ nav label {
     height: 1.7%;
     width: 1.9%;
     border-radius: 3rem;
-    background: conic-gradient(var(--bojaF) 50%, var(--bojaH) 0 180%);
+    background: conic-gradient(var(--colorF) 50%, var(--colorH) 0 180%);
     transform: translate(-50%, -50%);
 
   }
@@ -644,7 +659,7 @@ nav label {
     height: 1.7%;
     width: 1.9%;
     border-radius: 3rem;
-    background: conic-gradient(var(--bojaF) 33%, var(--bojaH) 0 66%, var(--bojaL) 0);
+    background: conic-gradient(var(--colorF) 33%, var(--colorH) 0 66%, var(--colorL) 0);
     transform: translate(-50%, -50%);
 
   }
@@ -670,7 +685,7 @@ nav label {
     height: 1.7%;
     width: 1.9%;
     border-radius: 3rem;
-    background-color: var(--bojaF); 
+    background-color: var(--colorF); 
     transform: translate(-50%, -50%);
   
   }
@@ -682,7 +697,7 @@ nav label {
     height: 1.7%;
     width: 1.9%;
     border-radius: 3rem;
-    background-color: var(--bojaL); 
+    background-color: var(--colorL); 
     transform: translate(-50%, -50%);
   
   } 
@@ -695,7 +710,7 @@ nav label {
     height: 1.7%;
     width: 1.9%;
     border-radius: 3rem;
-    background-color:  var(--bojaH); 
+    background-color:  var(--colorH); 
     transform: translate(-50%, -50%);
 
   } 
@@ -721,7 +736,7 @@ nav label {
     position: absolute;
     top: calc(calc(00 * -1.918%) + calc(100% - 37.8%) + calc(-20 * -1.91%));
     left: calc(calc(00 * 2.440%) + calc(8.4% + 49.5%) + calc(-20 * 2.440%));
-    background: var(--bojaF);
+    background: var(--colorF);
     transform: translate(-50%, -50%);
 
   }
@@ -734,7 +749,7 @@ nav label {
     position: absolute;
     top: calc(calc(00 * -1.918%) + calc(100% - 37.8%) + calc(-20 * -1.91%));
     left: calc(calc(00 * 2.440%) + calc(8.4% + 49.5%) + calc(-20 * 2.440%));
-    background: var(--bojaF);
+    background: var(--colorF);
     transform: translate(-50%, -50%);
 
   }

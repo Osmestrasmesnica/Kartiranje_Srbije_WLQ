@@ -2,8 +2,8 @@
 const   inputs = document.querySelectorAll('.varijable input')
 function liveUpdate () {
     const sufiks = this.dataset.sizing || '';
-    //console.log(sufiks);
-    //console.log(this.name);
+    console.log(sufiks);
+    console.log(this.name);
     document.documentElement.style.setProperty(`--${this.name}`,this.value + sufiks);
 }
 inputs.forEach(input => input.addEventListener('change', liveUpdate));
