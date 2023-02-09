@@ -759,11 +759,11 @@ nav label {
     background: #4444ff;
     color: #fff;
     border-radius: 50%;
-    height: 9px; /*8.25px*/
+    height: 2.7%;
+    width: 2.9%;
     position: absolute;
     top: calc(calc(00 * -1.918%) + calc(100% - 37.8%) + calc(-20 * -1.91%));
     left: calc(calc(00 * 2.440%) + calc(8.4% + 49.5%) + calc(-20 * 2.440%));
-    width: 9.0202px; /*8.2333px*/
     line-height: 40px;
     text-align: center;
     font-size: 20px;
