@@ -63,13 +63,13 @@
       <div class="input-container">
         <div class="inputTaksona">
           <div class="utmRow">
-            <select id="headerSelect" onchange="showProbaData()">
+            <select id="headerSelect" onchange="showProbaData(); populateSelect()">
               <option value="">-- Row with 10x10 UTM --</option>
             </select>
           </div>  
               
           <div class="dataToShow">
-            <button type="button" class="btn" onclick="populateSelect()">Load existing taxons</button> 
+            <!-- <button type="button" class="btn" onclick="populateSelect()">Load existing taxons</button>  -->
             <select id="selected" onchange="showSelectedValue(this)">
               <option value="">-- Select taxon --</option>
             </select>
@@ -91,9 +91,7 @@
           </div>   
     
           <div class="btnTaxa">
-            <button type="button" class="loadTaxa" id="loadTaxa">Load taxon</button>
-            <button type="button" class="addTaxa" id="addTaxa">Add taxon</button>
-            <button type="button" class="togetherTaxa" id="togetherTaxa">OBA</button>
+            <button type="button" class="togetherTaxa" id="togetherTaxa">ADD TAXA</button>
           </div>     
         </div>
             
@@ -133,6 +131,7 @@
 <script src="../JS/listOfTaxons.js" ></script>
 <script src="../JS/allData.js"></script>
 <!-- <script src="../JS/selectTaxon.js"></script> -->
-<script src="../JS/proba.js"></script>
+<!-- <script src="../JS/izabranTaxon.js"></script> -->
+<script src="../JS/proba2.js"></script>
 </body>
 </html>

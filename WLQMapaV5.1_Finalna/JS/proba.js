@@ -32,7 +32,54 @@ const importedData = new Promise((resolve, reject) => {
       select.addEventListener("change", () => {
         input.disabled = select.value !== "";
       });
-    let btnSelectedTaxon = document.querySelector('.togetherTaxa');
+
+      /*! ovo dodaješ dole */
+    function loadData() {
+      const value = select.value !== "" ? select.value : input.value;
+      let arrOdabraneVrste = mapData.filter(function(item){
+        if (item.vrsta.includes(value)){
+        return item
+        };
+      });
+      let UTMOdabraneVrste = [];
+      let TipPodatkaOdabraneVrste = [];
+      var T = new Array();
+      var L = new Array();
+      var H = new Array();
+      var qwerty = [];
+      let output1 = "";
+      console.log(value);
+      for(let i=0; i<arrOdabraneVrste.length; i++){
+          UTMOdabraneVrste.push(arrOdabraneVrste[i].utm10x10);
+          TipPodatkaOdabraneVrste.push(arrOdabraneVrste[i].podatak);
+          const proba10 = UTMOdabraneVrste[i];
+
+          T[i] = arrOdabraneVrste
+              .filter(utm => utm.utm10x10.includes(`${UTMOdabraneVrste[i]}`) 
+              && utm.podatak.includes("Terenski"))
+              
+          L[i] = arrOdabraneVrste
+              .filter(utm => utm.utm10x10.includes(`${UTMOdabraneVrste[i]}`) 
+              && utm.podatak.includes("Literaturni"))
+
+          //todo prepraviti ovde iz USMENI u HERBARSKI
+           H[i] = arrOdabraneVrste
+              .filter(utm => utm.utm10x10.includes(`${UTMOdabraneVrste[i]}`) 
+              && utm.podatak.includes("Usmeni"))
+
+          // !ako se nesto nalazi pod Terenski/Usmeni/Herbarski/Literaturni podatak onda će dužina biti veća od 0
+          T[i].length > 0 && L[i].length > 0 && H[i].length > 0 ? qwerty[i] = ("TiLiH") 
+          : T[i].length > 0 && L[i].length > 0 ? qwerty[i] = ("TiL") 
+          : T[i].length > 0 && H[i].length > 0 ? qwerty[i] = ("TiH") 
+          : L[i].length > 0 && H[i].length > 0 ? qwerty[i] = ("LiH")
+          : T[i].length > 0 ? qwerty[i] = ("T") 
+          : L[i].length > 0 ? qwerty[i] = ("L")
+          : T[i].length > 0 ? qwerty[i] = ("H")
+          : console.log("nema bato nista");
+          console.log(qwerty[i]);
+    }};
+    
+      let btnSelectedTaxon = document.querySelector('.togetherTaxa');
       btnSelectedTaxon.addEventListener('click', event => {
         const value = select.value !== "" ? select.value : input.value;
 
