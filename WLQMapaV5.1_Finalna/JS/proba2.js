@@ -46,11 +46,13 @@ importedData.then(() => {
         selectedSpeciesData = mapData.filter((item) =>
             item.vrsta.includes(species) ? item : undefined
         );
-        console.log(species);
+        // console.log(species);
         console.log(selectedSpeciesData.length);
         for (let i = 0; i < selectedSpeciesData.length; i++) {
             UTMOdabraneVrste.push(selectedSpeciesData[i].utm10x10);
             TipPodatkaOdabraneVrste.push(selectedSpeciesData[i].podatak);
+            console.log(TipPodatkaOdabraneVrste);
+            console.log(UTMOdabraneVrste);
             const proba10 = UTMOdabraneVrste[i];
             let btnSelectedTaxon = document.querySelector('.togetherTaxa');
 
@@ -88,7 +90,7 @@ importedData.then(() => {
                                     : T[i].length > 0
                                         ? (qwerty[i] = "H")
                                         : console.log("nema bato nista");
-            console.log(qwerty[i]);
+            // console.log(qwerty[i]);
 
 
             btnSelectedTaxon.addEventListener('click', function () {
@@ -144,9 +146,9 @@ importedData.then(() => {
             consoleOutput = `For the species "${species}" we have ${UTMOdabraneVrste.length} different occurrences with the following data types present: ${qwertyCountString}.`;
         }
 
-        console.log(consoleOutput);
-        console.table(UTMOdabraneVrste);
-        console.log(selectedSpeciesData.length);
+        // console.log(consoleOutput);
+        // console.table(UTMOdabraneVrste);
+        // console.log(selectedSpeciesData.length);
     }
 
     const select = document.querySelector("#selected");

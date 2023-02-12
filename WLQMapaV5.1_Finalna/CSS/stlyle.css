@@ -350,6 +350,14 @@ nav label {
     align-items: center;
   }
 
+  .togetherTaxa {
+    width: 90%;
+  }
+
+  #btnAllData {
+    width: 90%;
+  }
+
   /*! navigation bar */
 
   /*! data to show */
