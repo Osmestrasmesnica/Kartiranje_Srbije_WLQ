@@ -8,9 +8,9 @@
     <link rel="stylesheet" href="../CSS/stlyle.css" crossorigin="anonymous">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.15.6/xlsx.core.min.js"></script>
     <script src="https://d3js.org/d3.v6.min.js"></script>
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet" crossorigin>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.min.js"></script>
 </head>
 <body>
   <div class="wlq">
@@ -36,15 +36,10 @@
           </li>
           <li><a href="#">Export</a>
             <ul>
-              <li><a href="#">as JPG</a></li>
-              <li><a href="#">as TIFF</a></li>
-              <li><a href="#">as Excel</a></li>
-              <li><a href="#">as JPG</a></li>
-              <li><a href="#">as TIFF</a></li>
-              <li><a href="#">as Excel</a></li>
-              <li><a href="#">as JPG</a></li>
-              <li><a href="#">as TIFF</a></li>
-              <li><a href="#">as Excel</a></li>
+              <li><a href="#" id="png">as PNG</a></li>
+              <li><a href="#" id="jpg">as JPEG</a></li>
+              <li><a href="#" id="svg">as SVG</a></li>
+              <li><a href="#" id="tiff">as TIFF</a></li>
             </ul>          
           </li>
           <li><a href="#">Contact</a></li> 
@@ -133,5 +128,6 @@
 <!-- <script src="../JS/selectTaxon.js"></script> -->
 <!-- <script src="../JS/izabranTaxon.js"></script> -->
 <script src="../JS/proba2.js"></script>
+<script src="../JS/btnForExport.js"></script>
 </body>
 </html>
