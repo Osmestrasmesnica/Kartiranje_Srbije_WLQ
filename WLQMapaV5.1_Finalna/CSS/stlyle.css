@@ -91,11 +91,11 @@ float: none;
   }
   /*! OVO SE PODEŠAVA NAKNADNO U MEDIA*/
   .map-container {
-    max-width: 890px;
+    max-width: 780px;
   }
   /*! OVO SE PODEŠAVA NAKNADNO U MEDIA*/ 
   img {
-    max-width: 890px; /*! podesiti ovo*/
+    max-width: 780px; /*! podesiti ovo*/
     float: left;
     max-height: 86.5vh;
   }
@@ -779,3 +779,184 @@ nav label {
     background: url('https://api.iconify.design/eva/question-mark-circle-outline.svg') no-repeat center center  / contain;
     transform: translate(-50%, -50%);
   }
+
+  .footer {
+    width: 100%;
+    color: var(--clr2);
+    background-color: var(--clr1);
+    align-items: center;
+  }
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 0.1rem;
+  }
+  .Navigation {
+    padding-left: 1rem;
+    padding-top: 0.2rem;
+    padding-right: 1rem;
+  }
+  
+  .Navigation h3 {
+    font-weight: bold;
+    font-size: 16px;
+    cursor: default;
+  }
+  .Navigation ul{
+    margin-left: 0.5rem;
+    line-height: 1;
+    font-size: 14px
+  }
+  .Navigation li {
+    list-style: none;
+    cursor: pointer;
+  }
+  .icon-wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+  }
+  .wrapper .icon{
+    position: relative;
+    background-color: #ffffff;
+    border-radius: 50%;
+    margin: 10px;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    color: #333;
+    text-decoration: none;
+  }
+  .wrapper .tooltip {
+    position: absolute;
+    top: 0;
+    line-height: 1.5;
+    font-size: 14px;
+    background-color: #ffffff;
+    color: #ffffff;
+    padding: 5px 8px;
+    border-radius: 5px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  .wrapper .tooltip::before {
+    position: absolute;
+    content: "";
+    height: 8px;
+    width: 8px;
+    background-color: #ffffff;
+    bottom: -3px;
+    left: 50%;
+    transform: translate(-50%) rotate(45deg);
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  .wrapper .icon:hover .tooltip {
+    top: -45px;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
+  .wrapper .icon:hover span,
+  .wrapper .icon:hover .tooltip {
+    text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
+  }
+  .wrapper .facebook:hover,
+  .wrapper .facebook:hover .tooltip,
+  .wrapper .facebook:hover .tooltip::before {
+    background-color: #3b5999;
+    color: #ffffff;
+  }
+  .wrapper .twitter:hover,
+  .wrapper .twitter:hover .tooltip,
+  .wrapper .twitter:hover .tooltip::before {
+    background-color: #46c1f6;
+    color: #ffffff;
+  }
+  .wrapper .instagram:hover,
+  .wrapper .instagram:hover .tooltip,
+  .wrapper .instagram:hover .tooltip::before {
+    background-color: #e1306c;
+    color: #ffffff;
+  }
+  .wrapper .github:hover,
+  .wrapper .github:hover .tooltip,
+  .wrapper .github:hover .tooltip::before {
+    background-color: #333333;
+    color: #ffffff;
+  }
+  .wrapper .youtube:hover,
+  .wrapper .youtube:hover .tooltip,
+  .wrapper .youtube:hover .tooltip::before {
+    background-color: #de463b;
+    color: #ffffff;
+  }
+  .copy-right{
+    width: 100%;
+    text-align: center;
+    padding: 0.2rem;
+    color: var(--clr2);
+    cursor: default;
+  }
+  .copy-right a{
+    text-decoration: none;
+    color: var(--clr3);
+    padding: 0.1rem;
+  }
+  .copy-right:before {
+    content: "";
+    display: block;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.5) 10%, rgba(255, 255, 255, 0.5) 90%, rgba(255, 255, 255, 0) 100%);
+    opacity: 1;
+    width: 100%;
+    margin: 0 auto;
+  }
+  
+.Navigations{
+  display: contents;
+}
+
+@media only screen and (max-width:717px) {
+  .Navigations{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+  }
+}
+
+#contact{
+  display: flex;
+  align-items: center;
+}
+
+#contact a{
+  text-decoration: none;
+  color: var(--clr2);
+}
+
+.footer li:hover {
+  color: var(--clr3); /* change color to desired hover color */
+}
+#contact a:hover {
+  color: var(--clr3); /* change color to desired hover color */
+}
+
+.copy-right-link:hover{
+  background-color: var(--clr2);
+}
