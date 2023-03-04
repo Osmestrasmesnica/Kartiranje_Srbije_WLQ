@@ -38,10 +38,10 @@ body {
   align-items: center;
   font-family: "Lato", sans-serif;
   background-color: var(--clr3);
-  margin: 1em;
+  /* margin: 1em; */
   line-height: 1.5;
   height: 100%;
-  justify-content: center;
+  /* justify-content: center; */
 }
 
 .wlq{
@@ -60,6 +60,7 @@ body {
   position: relative;
   width: 100%;
   display: flex;
+  max-width: 860px;
 }
 
 img {
@@ -746,7 +747,6 @@ nav label {
     left: calc(calc(00 * 2.440%) + calc(8.4% + 49.5%) + calc(-20 * 2.440%));
     background: var(--colorF);
     transform: translate(-50%, -50%);
-
   }
 
   .zvezda {
@@ -759,7 +759,6 @@ nav label {
     left: calc(calc(00 * 2.440%) + calc(8.4% + 49.5%) + calc(-20 * 2.440%));
     background: var(--colorF);
     transform: translate(-50%, -50%);
-
   }
 
   .sumnjiv {
@@ -779,5 +778,4 @@ nav label {
     content: "";
     background: url('https://api.iconify.design/eva/question-mark-circle-outline.svg') no-repeat center center  / contain;
     transform: translate(-50%, -50%);
-
   }
