@@ -144,8 +144,31 @@
           </ul>
         </div>
         <div class="Navigation" id="contact">
-          <h3><a href="CONTACT US">CONTACT US</a></h3>
+          <h3><a href="#">CONTACT US</a></h3>
         </div>
+        <!-- Hidden div that contains the form -->
+        <div class="form-container" style="display:none;">
+          <h3>Want to get in touch?</h3>
+          <form>
+            <div class="wrapper-sendmail">
+              <div class="wrapper-name">     
+                <label for="name">NAME</label>
+                <input type="text" id="name" placeholder="Enter your name">
+              </div>
+              <div class="wrapper-email"> 
+                <label for="email">EMAIL</label>
+                <input type="email" id="email" placeholder="Enter your email">
+              </div>
+            </div>
+            <label for="message">FORM LABEL</label>
+            <textarea id="message" placeholder="Enter your message"></textarea>
+            <div class="button-form-container">
+              <button type="submit">Send</button>
+              <button class="close-btn">Close</button>
+            </div>
+          </form>
+        </div>
+        
         </div>
         
         <div class="icon-wrapper">
@@ -185,6 +208,7 @@
 <script src="../JS/importJson.js" ></script>
 <script src="../JS/listOfTaxons.js" ></script>
 <script src="../JS/allData.js"></script>
+<script src="../JS/sendEmail.js"></script>
 <!-- <script src="../JS/selectTaxon.js"></script> -->
 <!-- <script src="../JS/izabranTaxon.js"></script> -->
 <script src="../JS/proba2.js"></script>

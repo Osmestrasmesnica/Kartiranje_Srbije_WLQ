@@ -960,3 +960,102 @@ nav label {
 .copy-right-link:hover{
   background-color: var(--clr2);
 }
+
+/* Style the form container */
+.form-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0,0,0,0.5);
+}
+
+/* Style the form wrapper */
+.form-wrapper {
+  padding: 20px;
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
+  max-width: 500px;
+  width: 90%;
+  box-sizing: border-box;
+}
+
+/* Style the form labels */
+.form-container label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+form {
+  width: 90%;
+  max-width: 500px;
+}
+/* Style the form inputs */
+.form-container input[type="text"],
+.form-container input[type="email"],
+.form-container textarea {
+  display: block;
+  margin: 0;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+/* Style the form button */
+.form-container button[type="submit"] {
+  background-color: var(--clr1);
+  color: var(--clr2);
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.form-container button[type="submit"]:hover {
+  background-color: var(--clr2);
+  color: var(--clr1);
+}
+
+/* Style the close button */
+.close-btn {
+  background-color: var(--clr1);
+  color: var(--clr2);
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.close-btn:hover {
+  color: var(--clr1);
+  background-color: var(--clr2);
+}
+
+.wrapper-sendmail{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.button-form-container{
+  display: flex;
+  justify-content: space-between;
+  color: var(--clr1);
+}
+
+#message::placeholder {
+  font-family: "Lato", sans-serif;
+  font-size: 16px;
+  color: var(--clr2);
+  text-align: center;
+}
